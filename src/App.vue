@@ -5,7 +5,7 @@
       <el-container>
         <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
           <el-menu class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :router="true">
-            <el-menu-item index="1">概览</el-menu-item>
+            <el-menu-item index="1" route="/">概览</el-menu-item>
             <el-submenu index="2">
               <template slot="title">设备管理</template>
               <el-menu-item index="2-1" route="/product">产品</el-menu-item>

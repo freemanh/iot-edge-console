@@ -15,12 +15,14 @@
 </template>
 
 <script>
-import { Table, TableColumn, Button } from "element-ui";
+import { Table, TableColumn, Button, Message } from "element-ui";
+import { getDevices } from "../api";
 
 import Vue from "vue";
 Vue.use(Table);
 Vue.use(TableColumn);
 Vue.use(Button);
+Vue.use(Message);
 
 export default {
   name: "product",
@@ -42,6 +44,15 @@ export default {
     formatBool(row, column, cellValue) {
       return cellValue ? "是" : "否";
     },
+  },
+  created() {
+    console.log(this)
+    getDevices()
+      .then(() => {})
+      .catch(() => {
+        console.log(this)
+        
+      });
   },
 };
 </script>
