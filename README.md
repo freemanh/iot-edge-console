@@ -1,5 +1,3 @@
-# iot-edge-console
-
 ## Project setup
 ```
 npm install
